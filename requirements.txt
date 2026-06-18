@@ -1,0 +1,16 @@
+# Core dependencies (the package runs fully offline with just these).
+numpy>=1.24
+matplotlib>=3.7
+pyyaml>=6.0
+
+# Testing
+pytest>=7.0
+
+# --- Optional extras (install only what you need) ---
+# Frontier coding agents:
+#   pip install anthropic          # ClaudeAgent  (set ANTHROPIC_API_KEY)
+#   pip install openai             # OpenAIAgent  (set OPENAI_API_KEY)
+# Local open-source agents:
+#   run an Ollama server (https://ollama.com) for LocalAgent — no pip package needed
+# High-fidelity Push-T environment:
+#   pip install gym-pusht gymnasium

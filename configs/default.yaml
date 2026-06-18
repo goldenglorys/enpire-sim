@@ -1,0 +1,22 @@
+# Default ENPIRE-Sim experiment configuration.
+# These mirror the CLI flags of scripts/run_experiment.py. Edit and pass values
+# through the CLI, or load this file in your own driver script.
+
+environment:
+  name: pusht
+  backend: builtin        # builtin (numpy-only) | gym_pusht (high-fidelity)
+
+agents:
+  kind: mock              # mock | claude | openai | local
+  n_agents: 4             # fleet size
+  model: null             # override the backend's default model id
+
+evolution:
+  selector: ucb           # greedy | ucb | thompson | random
+  seed: 0
+
+orchestrator:
+  max_steps: 80
+  episodes_per_eval: 8
+  propose_every: 1
+  target_success: 0.95

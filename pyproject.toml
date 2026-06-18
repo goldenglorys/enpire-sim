@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "enpire-sim"
+version = "0.1.0"
+description = "Simulation-only reproduction and extension of NVIDIA ENPIRE with a bandit-based Evolution module."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "goldenglorys", email = "olusolagloryolamide@gmail.com" }]
+keywords = ["robot-learning", "autoresearch", "coding-agents", "multi-armed-bandit", "push-t"]
+
+dependencies = [
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+claude = ["anthropic>=0.40"]
+openai = ["openai>=1.0"]
+gym = ["gym-pusht>=0.1", "gymnasium>=0.29"]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+include = ["enpire*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,20 @@
+# Configuration for the headline Evolution-module ablation
+# (scripts/run_ablation.py). This reproduces the core thesis experiment:
+# greedy (the ENPIRE baseline) vs. principled bandit selectors.
+
+selectors:
+  - greedy
+  - ucb
+  - thompson
+  - random
+
+n_agents:        # fleet sizes to sweep (mirrors ENPIRE's 1/4/8-robot scaling)
+  - 1
+  - 4
+  - 8
+
+seeds: 8         # repetitions per cell for mean +/- std
+agent: mock      # use mock for cheap, reproducible selector comparison
+max_steps: 100
+episodes_per_eval: 8
+target_success: 0.95
