@@ -2,8 +2,7 @@
 
 A **simulation-only reproduction and extension** of NVIDIA's
 [ENPIRE](https://research.nvidia.com/labs/gear/enpire/) (*Agentic Robot Policy
-Self-Improvement in the Real World*, Xiao et al., 2026), built as a master's
-thesis research codebase.
+Self-Improvement in the Real World*, Xiao et al., 2026), built as a research codebase.
 
 ENPIRE is a harness in which **coding agents** (Claude Code, Codex, Kimi Code)
 autonomously improve real-robot manipulation policies through a closed loop of
